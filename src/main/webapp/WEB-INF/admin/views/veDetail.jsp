@@ -54,7 +54,7 @@
                     </dt>
 
                     <dd>
-                    	${ve.ghe.hang}${ve.ghe.soghe}
+                    	${ve.ghe}
                     </dd>
                 </div>
                 <div class="form-group">

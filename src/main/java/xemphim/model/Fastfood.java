@@ -35,7 +35,7 @@ public class Fastfood implements Serializable {
 	@Column(nullable=false)
 	@NotNull(message="Giá không được để trống !")
 	@Min(value=500,message="Giá không hợp lệ !")
-	private float gia;
+	private int gia;
 
 	@Column(length=1000)
 	private String image;
@@ -77,11 +77,11 @@ public class Fastfood implements Serializable {
 		this.createdAt = createdAt;
 	}
 
-	public float getGia() {
+	public int getGia() {
 		return this.gia;
 	}
 
-	public void setGia(float gia) {
+	public void setGia(int gia) {
 		this.gia = gia;
 	}
 

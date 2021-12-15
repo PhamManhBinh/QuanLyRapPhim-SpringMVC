@@ -33,10 +33,8 @@ public class Ve implements Serializable {
 	@UpdateTimestamp
 	private Timestamp updatedAt;
 
-	//bi-directional many-to-one association to Ghe
-	@ManyToOne
-	@JoinColumn(name="ghe_id", nullable=false)
-	private Ghe ghe;
+	@Column(nullable=false, length=3)
+	private String ghe;
 
 	//bi-directional many-to-one association to Nguoidung
 	@ManyToOne
@@ -49,7 +47,7 @@ public class Ve implements Serializable {
 	private Suatchieu suatchieu;
 
 	//bi-directional many-to-one association to VeFood
-	@OneToMany(mappedBy="ve")
+	@OneToMany(mappedBy="ve",fetch = FetchType.EAGER)
 	private List<VeFood> veFoods;
 	
 	@Column(nullable=false)
@@ -82,11 +80,11 @@ public class Ve implements Serializable {
 		this.updatedAt = updatedAt;
 	}
 
-	public Ghe getGhe() {
+	public String getGhe() {
 		return this.ghe;
 	}
 
-	public void setGhe(Ghe ghe) {
+	public void setGhe(String ghe) {
 		this.ghe = ghe;
 	}
 

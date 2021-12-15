@@ -22,7 +22,13 @@ public class VeDAO {
 	public int save(Ve ve){  
 		Session s = sessionFactory.getObject().getCurrentSession();
 	    return (int) s.save(ve);
-	}  
+	}
+	
+	@Transactional
+	public int saveVeFood(VeFood vefood) {
+		Session s = sessionFactory.getObject().getCurrentSession();
+	    return (int) s.save(vefood);
+	}
 	
 	@Transactional
 	public void delete(Ve ve){  
@@ -51,5 +57,13 @@ public class VeDAO {
 		Query q = s.createQuery("From VeFood Where ve.id="+id);
 		return q.getResultList();
 	}   
+	
+	@Transactional
+	public List<String> getGheDaDat(int idSuatchieu){
+		Session s = sessionFactory.getObject().getCurrentSession();
+		Query q = s.createQuery("Select ghe From Ve ve Where ve.suatchieu.id=:id And ve.xoa=0");
+		q.setParameter("id", idSuatchieu);
+		return q.getResultList();
+	}
 
 }

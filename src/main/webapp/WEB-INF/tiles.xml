@@ -230,6 +230,24 @@
 	    
 	    <!-- API Xem lich chieu -->
 	    <definition name="showtime" template="/WEB-INF/user/views/showtime.jsp" />
+	    
+	    <!-- Trang Dat Ve -->
+	    <definition name="datve" extends="user.definition">  
+	        <put-attribute name="title" value="Đặt Vé" />  
+	        <put-attribute name="body" value="/WEB-INF/user/views/datve.jsp" />  
+	    </definition> 
+	    
+	    <!-- Trang Dat Combo -->
+	    <definition name="datvecombo" extends="user.definition">  
+	        <put-attribute name="title" value="Đặt Combo" />  
+	        <put-attribute name="body" value="/WEB-INF/user/views/datvecombo.jsp" />  
+	    </definition> 
+	    
+	    <!-- Dat Ve Thanh Cong -->
+	    <definition name="success" extends="user.definition">  
+	        <put-attribute name="title" value="Đặt Vé Thành Công" />  
+	        <put-attribute name="body" value="/WEB-INF/user/views/success.jsp" />  
+	    </definition> 
  
  	<!-- END CLIENT -->
 </tiles-definitions> 

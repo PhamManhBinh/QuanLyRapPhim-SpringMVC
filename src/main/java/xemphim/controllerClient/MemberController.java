@@ -32,6 +32,7 @@ public class MemberController {
 			redirectAttributes.addFlashAttribute("message", "Vui lòng đăng nhập trước");
 			return "redirect:/login";
 		}
+		
 		model.addAttribute("user", (Nguoidung) session.getAttribute("user"));
 		return "member";
 	}

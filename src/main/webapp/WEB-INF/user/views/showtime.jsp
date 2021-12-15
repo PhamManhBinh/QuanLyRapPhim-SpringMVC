@@ -40,7 +40,7 @@
         			for(Suatchieu sc : list.getValue()){
         		%>
         			<li>
-                    	<a style="font-size:20;border:2px double #b1154a;margin-right:12px;margin-bottom:12px;" href="<c:url value="/datve?id=" /><%= sc.getId() %>">
+                    	<a style="font-size:20;border:2px double #b1154a;margin-right:12px;margin-bottom:12px;" href="<c:url value="/datve/" /><%= sc.getId() %>">
                         	<span><fmt:formatDate value="<%= sc.getThoidiembatdau() %>" pattern="HH:mm"/><i class="ion-ios-arrow-right"></i></span>
                     	</a>
                 	</li>

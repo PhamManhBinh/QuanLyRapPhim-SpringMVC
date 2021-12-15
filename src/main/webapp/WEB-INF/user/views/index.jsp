@@ -30,7 +30,7 @@
                             <article class="article col-md-12">
                                 <div class="inner">
                                     <figure id="imgpost">
-                                        <a href="">
+                                        <a href="<c:url value="/phim/chitiet?id=${phim.id}" />">
                                             <img src="${pageContext.request.contextPath}/Assets/upload/poster/${phim.poster}" alt="Sample Article">
                                         </a>
                                     </figure>
@@ -54,7 +54,7 @@
                                                 <i class="ion-android-favorite-outline"></i>
                                                 <div>99</div>
                                             </a>
-                                            <a class="btn btn-primary more" href="@Url.Action("LichChieu",new { controller="Phim", id=item.id})">
+                                            <a class="btn btn-primary more" href="<c:url value="/phim/lichchieu?id=${phim.id}" />">
                                                 <div>Đặt vé</div>
                                                 <div><i class="ion-ios-arrow-thin-right"></i></div>
                                             </a>

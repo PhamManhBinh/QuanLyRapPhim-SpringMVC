@@ -57,4 +57,5 @@ public class SuatChieuDAO {
 		q.setParameter("date", date);
 		return q.getResultList();
 	}
+	
 }

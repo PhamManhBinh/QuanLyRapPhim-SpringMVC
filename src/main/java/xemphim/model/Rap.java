@@ -60,10 +60,6 @@ public class Rap implements Serializable {
 	@Column(nullable=false)
 	private int xoa;
 
-	//bi-directional many-to-one association to Ghe
-	@OneToMany(mappedBy="rap")
-	private List<Ghe> ghes;
-
 	//bi-directional many-to-one association to Cumrap
 	@ManyToOne
 	@JoinColumn(name="cumrap_id", nullable=false)
@@ -140,27 +136,6 @@ public class Rap implements Serializable {
 		this.xoa = xoa;
 	}
 
-	public List<Ghe> getGhes() {
-		return this.ghes;
-	}
-
-	public void setGhes(List<Ghe> ghes) {
-		this.ghes = ghes;
-	}
-
-	public Ghe addGhe(Ghe ghe) {
-		getGhes().add(ghe);
-		ghe.setRap(this);
-
-		return ghe;
-	}
-
-	public Ghe removeGhe(Ghe ghe) {
-		getGhes().remove(ghe);
-		ghe.setRap(null);
-
-		return ghe;
-	}
 
 	public Cumrap getCumrap() {
 		return this.cumrap;

@@ -13,6 +13,7 @@
                     <!--div class="upload-btn-wrapper"-->
                     <label>Chọn Ảnh Banner: </label>
                     <input type="file" name="BannerImage" aria-describedby="emailHelp" /><br />
+                    <form:input path="image" type="hidden" class = "form-control form-control-user" id = "exampleInputEmail" placeholder = "Hình Ảnh Banner..." aria_describedby = "emailHelp" />
                     <form:errors path="image" cssClass="text-danger" />
                     <!--/div-->
                 </div>

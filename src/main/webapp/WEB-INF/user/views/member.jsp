@@ -97,7 +97,7 @@
 								<td>${ve.suatchieu.phim.ten}</td>
 								<td>${ve.suatchieu.rap.tenrap}</td>
 								<td>${ve.suatchieu.rap.cumrap.tencum}</td>
-								<td>${ve.ghe.hang}${ve.ghe.soghe}</td>
+								<td>${ve.ghe}</td>
 							</tr>
 						</c:forEach>
 					</tbody>

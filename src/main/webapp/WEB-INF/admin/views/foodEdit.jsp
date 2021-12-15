@@ -26,6 +26,7 @@
                     <!--div class="upload-btn-wrapper"-->
                     <label>Chọn Ảnh Món Ăn: </label>
                     <input type="file" name="FoodImage" aria-describedby="emailHelp" /><br />
+                    <form:input path="image" type="hidden" class = "form-control form-control-user" id = "exampleInputEmail" placeholder = "Ảnh Món Ăn..." aria_describedby = "emailHelp" />
                     <form:errors path="image" cssClass="text-danger" />
                     <!--/div-->
                 </div>
