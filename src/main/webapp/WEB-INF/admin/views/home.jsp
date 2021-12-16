@@ -20,7 +20,7 @@
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Số Phim Đang Chiếu
                             </div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.SoPhim</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">${sophim}</div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -39,7 +39,7 @@
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                 Tổng Doanh Thu
                             </div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.DoanhThu</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">${doanhthu}đ</div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -60,7 +60,7 @@
                             </div>
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">@ViewBag.SoVe</div>
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">${sove}</div>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                 Lượng Người Dùng
                             </div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.NguoiDung</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">${luongnguoidung}</div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-comments fa-2x text-gray-300"></i>

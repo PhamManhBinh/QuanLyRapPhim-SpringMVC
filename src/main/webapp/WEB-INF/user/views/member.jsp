@@ -90,15 +90,17 @@
 					</thead>
 					<tbody>
 						<c:forEach items="${user.ves}" var="ve">
-							<tr>
-								<td><fmt:formatDate value="${ve.suatchieu.ngay}"
-										pattern="dd/MM/yyyy" /> - <fmt:formatDate
-										value="${ve.suatchieu.thoidiembatdau}" pattern="HH:mm" /></td>
-								<td>${ve.suatchieu.phim.ten}</td>
-								<td>${ve.suatchieu.rap.tenrap}</td>
-								<td>${ve.suatchieu.rap.cumrap.tencum}</td>
-								<td>${ve.ghe}</td>
-							</tr>
+							<c:if test="${ve.xoa == 0 }">
+								<tr>
+									<td><fmt:formatDate value="${ve.suatchieu.ngay}"
+											pattern="dd/MM/yyyy" /> - <fmt:formatDate
+											value="${ve.suatchieu.thoidiembatdau}" pattern="HH:mm" /></td>
+									<td>${ve.suatchieu.phim.ten}</td>
+									<td>${ve.suatchieu.rap.tenrap}</td>
+									<td>${ve.suatchieu.rap.cumrap.tencum}</td>
+									<td>${ve.ghe}</td>
+								</tr>
+							</c:if>
 						</c:forEach>
 					</tbody>
 				</table>

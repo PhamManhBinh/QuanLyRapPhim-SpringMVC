@@ -1,6 +1,6 @@
 package xemphim.controllerClient;
 
-import javax.servlet.http.HttpServletRequest;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,8 +32,8 @@ public class MemberController {
 			redirectAttributes.addFlashAttribute("message", "Vui lòng đăng nhập trước");
 			return "redirect:/login";
 		}
-		
-		model.addAttribute("user", (Nguoidung) session.getAttribute("user"));
+		Nguoidung nguoidung = (Nguoidung) session.getAttribute("user");
+		model.addAttribute("user", nguoiDungDAO.find(nguoidung.getId()));
 		return "member";
 	}
 

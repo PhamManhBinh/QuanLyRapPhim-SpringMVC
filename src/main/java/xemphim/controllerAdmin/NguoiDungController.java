@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import xemphim.dao.NguoiDungDAO;
-import xemphim.model.Cumrap;
-import xemphim.model.Fastfood;
 import xemphim.model.Nguoidung;
 
 @Controller

@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import xemphim.dao.FoodDAO;
-import xemphim.model.Banner;
 import xemphim.model.Fastfood;
 import xemphim.util.Util;
 

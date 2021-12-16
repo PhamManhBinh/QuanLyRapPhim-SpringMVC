@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import xemphim.dao.PhimDAO;
 import xemphim.dao.RapDAO;
 import xemphim.dao.SuatChieuDAO;
-import xemphim.model.Rap;
 import xemphim.model.Suatchieu;
 
 @Controller

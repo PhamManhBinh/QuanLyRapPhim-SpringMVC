@@ -1,6 +1,6 @@
 package xemphim.controllerAdmin;
 
-import javax.servlet.http.HttpServletRequest;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,8 +26,6 @@ public class RapController {
 	@Autowired
 	CumRapDAO cumRapDAO;
 	
-	@Autowired
-	private HttpServletRequest request;
 	
 	@RequestMapping("/")
 	public String Index(Model model) {

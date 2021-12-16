@@ -27,7 +27,6 @@ import xemphim.dao.FoodDAO;
 import xemphim.dao.NguoiDungDAO;
 import xemphim.dao.SuatChieuDAO;
 import xemphim.dao.VeDAO;
-import xemphim.model.ComboCart;
 import xemphim.model.Fastfood;
 import xemphim.model.Nguoidung;
 import xemphim.model.Suatchieu;
@@ -193,7 +192,6 @@ public class DatVeController {
 		session.removeAttribute("listGheDaChon");
 		session.removeAttribute("listComboDaChon");
 		session.removeAttribute("listVe");
-		session.setAttribute("user", nguoiDungDAO.find(nguoidung.getId()));
 		return "success";
 	}
 }

@@ -65,5 +65,18 @@ public class VeDAO {
 		q.setParameter("id", idSuatchieu);
 		return q.getResultList();
 	}
+	
+	@Transactional
+	public int getDoanhThu() {
+		int doanhthu = 0;
+		List<Ve> ves = this.get();
+		for(Ve ve : ves) {
+			doanhthu += ve.getSuatchieu().getGiave();
+			for(VeFood vefood : ve.getVeFoods()) {
+				doanhthu += vefood.getSoluong()*vefood.getFastfood().getGia();
+			}
+		}
+		return doanhthu;
+	}
 
 }
