@@ -7,20 +7,20 @@
     <div class="container">
         <div class="row">
             <div class="line">
-                <div>TraiLers</div>
+                <div>TraiLer</div>
             </div>
             <div class="col-md-6 col-xs-6 col-sm-6">
                 <iframe width="560" height="315" src="${fn:replace(phim.trailer,'watch?v=','embed/')}?autoplay=1" 
                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="col-md-6 col-xs-6 col-sm-6">
-                <span class="tt">${phim.ten}</span>
+                <span class="tt"><b>${phim.ten}</b></span>
                 <hr>
-                <span class="tt">Đạo diễn:&nbsp;&nbsp;&nbsp;&nbsp;${phim.daodien}</span>
-                <span class="tt">Diễn viên:&nbsp;&nbsp;&nbsp;&nbsp;${phim.dienvien}</span>
-                <span class="tt">Thể loại:&nbsp;&nbsp;&nbsp;&nbsp;${phim.theloai}</span>
-                <span class="tt">Khởi chiếu:&nbsp;&nbsp;&nbsp;&nbsp;<fmt:formatDate value="${phim.ngaycongchieu}" pattern="dd/MM/yyyy"/></span>
-                <span class="tt">Thời Lượng:&nbsp;&nbsp;&nbsp;&nbsp;${phim.thoiluong}&nbsp;&nbsp;Phút</span>
+                <span class="tt"><b>Đạo diễn:</b>&nbsp;&nbsp;&nbsp;&nbsp;${phim.daodien}</span>
+                <span class="tt"><b>Diễn viên:</b>&nbsp;&nbsp;&nbsp;&nbsp;${phim.dienvien}</span>
+                <span class="tt"><b>Thể loại:</b>&nbsp;&nbsp;&nbsp;&nbsp;${phim.theloai}</span>
+                <span class="tt"><b>Khởi chiếu:</b>&nbsp;&nbsp;&nbsp;&nbsp;<fmt:formatDate value="${phim.ngaycongchieu}" pattern="dd/MM/yyyy"/></span>
+                <span class="tt"><b>Thời Lượng:</b>&nbsp;&nbsp;&nbsp;&nbsp;${phim.thoiluong}&nbsp;&nbsp;Phút</span>
                 <footer>
                     <a href="#" class="love">
                         <i class="ion-android-favorite-outline ok"></i>
@@ -33,6 +33,11 @@
                 </footer>
             </div>
         </div>
-        <span class="tt">Nội Dung Phim: ${phim.noidungphim}</span>
+        <div class="line">
+        	<div>Nội Dung Phim</div>
+        </div>
+        <div class="col-md-12 col-xs-12 col-sm-12">
+        	<span class="tt">${phim.noidungphim}</span>
+        </div>
     </div>
 </section>

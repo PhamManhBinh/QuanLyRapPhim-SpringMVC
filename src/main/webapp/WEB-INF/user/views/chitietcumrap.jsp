@@ -16,6 +16,9 @@
                     <div class="page-title theater-title">
                         <h3>Địa chỉ: ${cumrap.diachi}</h3>
                     </div>
+                    <div>
+                    	<img style="width:100%;margin-left:auto;margin-right:auto" src="<c:url value="/Assets/images/theater.jpg" />" />
+                    </div>
                 </div>
             </div>
 

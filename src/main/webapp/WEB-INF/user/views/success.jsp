@@ -68,19 +68,20 @@ td {
 						%>
 						<tr>
 							<td>Số Lượng Combo: <%= listVeFood == null ? "0" : listVeFood.size() %></td>
-							<td>
+							<td></td>
+						</tr>
 							<%
 								int tongCombo = 0;
 								if(listVeFood != null){
 									for(VeFood vefood : listVeFood){
 										tongCombo += vefood.getSoluong()*vefood.getFastfood().getGia();
 									}
-									out.print("Tổng Tiền Combo: "+tongCombo+"đ");
+								}
+								if(tongCombo != 0){
+									out.print("<tr><td>Tổng Tiền Combo: "+tongCombo+"đ</td><td></td></tr>");
 								}
 							%>
 								
-							</td>
-						</tr>
 						<tr>
 							<td>Tổng cộng:</td>
 							<td><label><%= tongGhe+tongCombo %></label></td>

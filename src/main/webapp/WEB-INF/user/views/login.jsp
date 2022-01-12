@@ -19,7 +19,6 @@
                         <div class="form-group">
                             <label class="fw">
                                 Mật khẩu
-                                <a href="#" class="pull-right">Quên mật khẩu?</a>
                             </label>
                             <form:input path="pass" type="password" class="form-control" />
                         </div>

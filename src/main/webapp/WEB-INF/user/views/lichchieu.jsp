@@ -5,7 +5,28 @@
 <%@ page import="xemphim.model.*" %>
 <%@ page import="java.time.*" %>
 <%@ page import="java.time.format.DateTimeFormatter" %>
-
+<%!
+public String convertDayVN(String dayEnglish){
+	switch(dayEnglish.toLowerCase()){
+		case "monday":
+			return "Thứ Hai";
+		case "tuesday":
+			return "Thứ Ba";
+		case "wednesday":
+			return "Thứ Tư";
+		case "thursday":
+			return "Thứ Năm";
+		case "friday":
+			return "Thứ Sáu";
+		case "saturday":
+			return "Thứ Bảy";
+		case "sunday":
+			return "Chủ Nhật";
+		default:
+			return dayEnglish.toLowerCase();
+	}
+}
+%>
 <section class="best-of-the-week">
     <nav class="menu">
         <div class="container">
@@ -43,7 +64,7 @@
                     %>
                             <li class="dropdown magz-dropdown magz-dropdown-megamenu" onclick="getShowTime('<%= date %>',${phim.id})" >
                                 <a href="#">
-                                    <%= date.getDayOfWeek().toString() %><br /><%= date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) %><i class="ion-ios-arrow-right"></i>
+                                    <%= convertDayVN(date.getDayOfWeek().toString()) %><br /><%= date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) %><i class="ion-ios-arrow-right"></i>
                                 </a>
                             </li>
                     <%

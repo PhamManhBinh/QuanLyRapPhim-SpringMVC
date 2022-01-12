@@ -120,7 +120,11 @@ public class DatVeController {
 		}
 		Fastfood food = foodDAO.find(id);
 		if (food != null) {
-			comboMap.put(id, quantity);
+			if(quantity == 0) {
+				comboMap.remove(id);
+			}else {
+				comboMap.put(id, quantity);
+			}
 		}
 		session.setAttribute("listComboDaChon", comboMap);
 //		for (Integer name : comboMap.keySet()) {

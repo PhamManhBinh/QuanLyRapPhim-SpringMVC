@@ -5,7 +5,7 @@
 <%@ page import="xemphim.model.*" %>
 <%@ page import="java.util.List" %>
 
-<link rel="stylesheet" type="text/css" href="~/Assets/css/datve.css" media="all" />
+<link rel="stylesheet" type="text/css" href="<c:url value="/Assets/css/datve.css" />" media="all" />
 <section class="best-of-the-week">
     <div class="container">
         <div class="row">
