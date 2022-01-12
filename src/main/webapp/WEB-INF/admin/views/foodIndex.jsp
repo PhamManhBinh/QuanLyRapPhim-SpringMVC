@@ -20,7 +20,6 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>ID</th>
                             <th>Tên Món</th>
                             <th>Mô Tả</th>
                             <th>Giá</th>
@@ -31,7 +30,6 @@
 
                     <tfoot>
                         <tr>
-                            <th>ID</th>
                             <th>Tên Món</th>
                             <th>Mô Tả</th>
                             <th>Giá</th>
@@ -43,7 +41,6 @@
                     <tbody>
                         <c:forEach var="food" items="${listFood}">
                                 <tr>
-                                    <td>${food.id}</td>
                                     <td>${food.tenmon}</td>
                                     <td>${food.mota}</td>
                                     <td>${food.gia}đ</td>

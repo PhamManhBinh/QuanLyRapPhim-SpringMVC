@@ -20,7 +20,6 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>ID</th>
                             <th>Tên Phim</th>
                             <th>Thể Loại</th>
                             <th>Ngày Công Chiếu</th>
@@ -32,7 +31,6 @@
 
                     <tfoot>
                         <tr>
-                            <th>ID</th>
                             <th>Tên Phim</th>
                             <th>Thể Loại</th>
                             <th>Ngày Công Chiếu</th>
@@ -45,7 +43,6 @@
                     <tbody>
                         <c:forEach var="phim" items="${listPhim}">
                                 <tr>
-                                    <td>${phim.id}</td>
                                     <td>${phim.ten}</td>
                                     <td>${phim.theloai}</td>
                                     <td><fmt:formatDate value="${phim.ngaycongchieu}" pattern="dd/MM/yyyy"/></td>

@@ -18,7 +18,6 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>ID</th>
                             <th>Tên Rạp</th>
                             <th>Loại Rạp</th>
                             <th>Kích thước ngang</th>
@@ -29,7 +28,6 @@
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>ID</th>
                             <th>Tên Rạp</th>
                             <th>Loại Rạp</th>
                             <th>Kích thước ngang</th>
@@ -42,7 +40,6 @@
                     <tbody>
                         <c:forEach var="rap" items="${listRap}">
                             <tr>
-                                <td>${rap.id}</td>
                                 <td>${rap.tenrap}</td>
                                 <td>${rap.loairap}</td>
                                 <td>${rap.ktngang}</td>

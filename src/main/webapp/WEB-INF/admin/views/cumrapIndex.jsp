@@ -19,7 +19,6 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>ID</th>
                             <th>Tên Cụm Rạp</th>
                             <th>Địa Chỉ</th>
                             <th></th>
@@ -27,7 +26,6 @@
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>ID</th>
                             <th>Tên Cụm Rạp</th>
                             <th>Địa Chỉ</th>
                             <th>Xóa</th>
@@ -37,7 +35,6 @@
                     <tbody>
                         <c:forEach var="cumrap" items="${listCumrap}">
                             <tr>
-                                <td>${cumrap.id}</td>
                                 <td>${cumrap.tencum}</td>
                                 <td>${cumrap.diachi}</td>
                                 <td>

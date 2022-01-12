@@ -19,7 +19,6 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>ID</th>
                             <th>Hình Quảng Cáo</th>
                             <th>Liên Kết</th>
                             <th></th>
@@ -28,7 +27,6 @@
 
                     <tfoot>
                         <tr>
-                            <th>ID</th>
                             <th>Hình Quảng Cáo</th>
                             <th>Liên Kết</th>
                             <th></th>
@@ -38,7 +36,6 @@
                     <tbody>
                         <c:forEach var="banner" items="${listBanner}">
                                 <tr>
-                                    <td>${banner.id}</td>
                                     <td><img src="${pageContext.request.contextPath}/Assets/upload/banner/${banner.image}" height="150" /></td>
                                     <td>${banner.link}</td>
                                     <td>
