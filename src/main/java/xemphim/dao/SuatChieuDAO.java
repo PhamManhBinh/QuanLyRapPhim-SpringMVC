@@ -51,9 +51,10 @@ public class SuatChieuDAO {
 	}   
 	
 	@Transactional
-	public List<Suatchieu> getByDate(Date date){
+	public List<Suatchieu> getByMovieAndDate(int id,Date date){
 		Session s = sessionFactory.getObject().getCurrentSession();
-		Query q = s.createQuery("From Suatchieu Where ngay=:date AND xoa=0");
+		Query q = s.createQuery("From Suatchieu Where phim.id=:id AND ngay=:date AND xoa=0");
+		q.setParameter("id", id);
 		q.setParameter("date", date);
 		return q.getResultList();
 	}

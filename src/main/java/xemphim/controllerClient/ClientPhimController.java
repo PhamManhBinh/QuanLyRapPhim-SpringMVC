@@ -71,11 +71,11 @@ public class ClientPhimController {
 			return "showtime";
 		}
 
-		if (phimDAO.find(id) == null || suatChieuDAO.getByDate(date).size() < 1) {
+		if (phimDAO.find(id) == null || suatChieuDAO.getByMovieAndDate(id,date).size() < 1) {
 			model.addAttribute("data", null);
 		} else {
 			// convert list to hashmap
-			List<Suatchieu> list = suatChieuDAO.getByDate(date);
+			List<Suatchieu> list = suatChieuDAO.getByMovieAndDate(id,date);
 			Map<String, List<Suatchieu>> map = new HashMap<String, List<Suatchieu>>();
 			for (Suatchieu sc : list) {
 				String key = sc.getRap().getCumrap().getTencum();
@@ -87,7 +87,6 @@ public class ClientPhimController {
 			
 			model.addAttribute("data", map);
 		}
-
 		return "showtime";
 	}
 }
