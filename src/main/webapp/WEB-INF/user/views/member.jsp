@@ -86,6 +86,7 @@
 							<th scope="col">Rạp</th>
 							<th scope="col">Cụm Rạp</th>
 							<th scope="col">Ghế</th>
+							<th scope="col">Mã QR</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -99,6 +100,8 @@
 									<td>${ve.suatchieu.rap.tenrap}</td>
 									<td>${ve.suatchieu.rap.cumrap.tencum}</td>
 									<td>${ve.ghe}</td>
+									<td><button onclick="qrcode(${ve.id})" class="btn btn-primary">Nhấn để quét mã</button></td>
+									
 								</tr>
 							</c:if>
 						</c:forEach>
@@ -108,3 +111,13 @@
 		</div>
 	</div>
 </section>
+
+<script>
+function qrcode(id){
+	swal({
+        title: 'QR Code',
+        text: '<img src="${pageContext.request.contextPath}/member/ve/'+id+'" width="300" height="300"/>',
+        html: true
+    });
+}
+</script>

@@ -4152,13 +4152,13 @@ blockquote {
 }
 #spantenphim{
   color: black;
-  font-family: Courier, monospace;
-  font-size: 18px;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 16px;
   margin: auto;
   font-weight: 600;
 }
 .tenphim{
-  height: 100px;
+  height: 75px;
 }
 #heightfooter{
   height: 500px;

@@ -130,9 +130,10 @@
                         var seats = [];
                         var foods = new Map();
                         var total = 0;
+                        //event onclick select seat
                         function onClickSelect(elm, price, name, isEmpty) {
                             if (!isEmpty) {
-                                alert("Ghế này đã có người đặt!");
+                            	sweetAlert('Ghế này đã có người đặt');
                                 return false;
                             }
                             //nếu người dùng bỏ chọn ghế này thì chuyển màu và loại bỏ khỏi mảng seats
@@ -163,6 +164,7 @@
                             $("#total_money").html(giaVe + "đ");
                             $("#total_pay").html(total + "đ");
                         }
+                        //event onclick food
                         function selectFood(elm, id, price, name) {
                             var soluong = parseInt($("#" + id).val());
                             var tenMon = "";
@@ -197,15 +199,29 @@
                             //hiển thị tổng tiền
                             $("#total_pay").html(total + "đ");
                         }
-                        
+                        //submit form đặt vé
                         function submit(){
                         	var form = document.getElementById("form-chonghe");
                         	if(seats.length == 0){
-                        		alert("Vui lòng chọn ghế cần đặt");
+                        		sweetAlert('Vui lòng chọn ghế cần đặt');
                         		return;
                         	}
                         	form.submit();
                         }
+                		//sweetModal
+                		function sweetAlert(msg) {
+                			$.sweetModal({
+                				content : msg,
+                				title : '',
+                				icon : $.sweetModal.ICON_WARNING,
+                				theme : $.sweetModal.THEME_MIXED,
+                				buttons : {
+                					'OK' : {
+                						classes : 'redB'
+                					}
+                				}
+                			});
+                		}
                     </script>
                 </div>
                 </div>

@@ -16,7 +16,6 @@ import xemphim.dao.VeDAO;
 import xemphim.model.Nguoidung;
 
 @Controller
-@RequestMapping("/admin")
 public class HomeController {
 	
 	@Autowired
@@ -28,7 +27,7 @@ public class HomeController {
 	@Autowired
 	NguoiDungDAO nguoiDungDAO;
 	
-	@RequestMapping("/")
+	@RequestMapping(value={"/admin", "/admin/"})
 	public String Index(RedirectAttributes redirectAttributes, HttpSession session,Model model) {
 		Nguoidung n = (Nguoidung) session.getAttribute("user");
 		if (n == null) {

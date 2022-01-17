@@ -7,21 +7,31 @@
 td {
 	padding: 8px;
 }
+td:first-child { 
+	color: #cc0066;
+	font-weight: bold;
+}
+table tr:nth-child(odd){
+    background: #eeeeee;
+}
 </style>
 <section class="best-of-the-week">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12 col-xs-12 col-sm-12">
-				<div class="block">
-					<div id="alert" class="alert alert-success" role="alert"
+			<div id="alert" class="alert alert-success" role="alert"
 						style="text-align: center; font-family: Arial; font-weight: bold; font-size: 20px">
-						Mua vé online thành công! Cảm ơn bạn đã sử dụng dịch vụ của chúng
-						tôi!</div>
-					<div class="line top">
+			Mua vé online thành công! Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi!
+			</div>
+			<div class="line top">
 						<div>Xác Nhận Thông Tin</div>
-					</div>
-					<table align="center"
-						style="margin-left: auto; margin-right: auto; border: 1px solid black; text-align: left; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: medium; background-color: antiquewhite">
+			</div>
+			<div class="col-md-3 col-xs-12 col-sm-12">
+				<p><img height="320" width="200" src="${pageContext.request.contextPath}/Assets/upload/poster/${suatchieu.phim.poster}" /></p>
+			</div>
+			<div class="col-md-6 col-xs-12 col-sm-12">
+				<div class="block">
+					<table
+						style="margin-left: auto; margin-right: auto;  text-align: left;  font-size: medium">
 						<tr>
 							<td>Người Đặt Vé:</td>
 							<td>${nguoidung.name}</td>
@@ -36,7 +46,7 @@ td {
 						</tr>
 						<tr>
 							<td>Rạp:</td>
-							<td>${suatchieu.rap.cumrap.tencum}- ${suatchieu.rap.tenrap}</td>
+							<td>${suatchieu.rap.cumrap.tencum} - ${suatchieu.rap.tenrap}</td>
 						</tr>
 						<tr>
 							<td>Tên Phim:</td>
@@ -88,6 +98,15 @@ td {
 						</tr>
 					</table>
 				</div>
+			</div>
+			<div class="col-md-3 col-xs-12 col-sm-12">
+				<%
+					for(Ve ve : listVe){
+						out.print("<p><img height=\"100\" width=\"100\" src=\""+request.getContextPath()+"/member/ve/"+ve.getId()+"\" />"+
+									"<br><b><lable style=\"color: #cc0066;\">Ghế: </lable>"+ve.getGhe()+"</b></p>");
+						
+					}
+				%>
 			</div>
 		</div>
 	</div>

@@ -1,6 +1,9 @@
 package xemphim.controllerClient;
 
 
+import java.io.OutputStream;
+
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,6 +23,7 @@ import org.springframework.web.servlet.view.RedirectView;
 import xemphim.dao.NguoiDungDAO;
 import xemphim.model.LoginForm;
 import xemphim.model.Nguoidung;
+import xemphim.util.Util;
 
 @Controller
 public class MemberController {
@@ -173,4 +178,16 @@ public class MemberController {
 		return "changepassword";
 
 	}
+	
+	
+	//qrCode cho mã vé
+	@RequestMapping(value = "/member/ve/{id}", method = RequestMethod.GET)
+	public void qrcode(@PathVariable("id") String id, HttpServletResponse response) throws Exception {
+		response.setContentType("image/png");
+		OutputStream outputStream = response.getOutputStream();
+		outputStream.write(Util.getQRCodeImage(id, 200, 200));
+		outputStream.flush();
+		outputStream.close();
+	}
+
 }

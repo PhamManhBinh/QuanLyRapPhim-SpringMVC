@@ -92,7 +92,7 @@
                             </div>
                         </section>
                         <div class="form-group">
-                            <a href="<c:url value="/datve/confirm"/>" class="btn btn-primary btn-block btndatve">Tiếp Theo <i class="ion-ios-arrow-right"></i></a>
+                            <a href="<c:url value="/datve/confirm"/>" class="btn btn-primary btn-block btndatve">Thanh Toán</a>
                         </div>
                     <script>
                         var countSeat = 0;

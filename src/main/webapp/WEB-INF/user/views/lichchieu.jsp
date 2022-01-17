@@ -9,19 +9,19 @@
 public String convertDayVN(String dayEnglish){
 	switch(dayEnglish.toLowerCase()){
 		case "monday":
-			return "Thứ Hai";
+			return "THỨ HAI";
 		case "tuesday":
-			return "Thứ Ba";
+			return "THỨ BA";
 		case "wednesday":
-			return "Thứ Tư";
+			return "THỨ TƯ";
 		case "thursday":
-			return "Thứ Năm";
+			return "THỨ NĂM";
 		case "friday":
-			return "Thứ Sáu";
+			return "THỨ SÁU";
 		case "saturday":
-			return "Thứ Bảy";
+			return "THỨ BẢY";
 		case "sunday":
-			return "Chủ Nhật";
+			return "CHỦ NHẬT";
 		default:
 			return dayEnglish.toLowerCase();
 	}
