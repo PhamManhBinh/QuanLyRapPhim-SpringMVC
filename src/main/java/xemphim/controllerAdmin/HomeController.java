@@ -28,15 +28,7 @@ public class HomeController {
 	NguoiDungDAO nguoiDungDAO;
 	
 	@RequestMapping(value={"/admin", "/admin/"})
-	public String Index(RedirectAttributes redirectAttributes, HttpSession session,Model model) {
-		Nguoidung n = (Nguoidung) session.getAttribute("user");
-		if (n == null) {
-			redirectAttributes.addFlashAttribute("message", "Vui lòng đăng nhập trước");
-			return "redirect:/login";
-		}
-		if(!n.getPermission().equals("admin")) {
-			return "redirect:/";
-		}
+	public String Index(Model model) {
 		
 		
 		model.addAttribute("sophim", phimDAO.get().size());

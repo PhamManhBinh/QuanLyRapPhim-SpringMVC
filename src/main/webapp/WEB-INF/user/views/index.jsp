@@ -82,7 +82,7 @@
 		<div class="row">
 			<div class="col-md-12 col-sm-12 col-xs-12">
 				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.830592765794!2d106.68783831411625!3d10.747536262666792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f084760cd35%3A0xf9643c63e560c67a!2zMTU3LzUyIETGsMahbmcgQsOhIFRy4bqhYywgUGjGsOG7nW5nIDEsIFF14bqtbiA4LCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1557642198305!5m2!1svi!2s"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.413342698269!2d109.20543085011217!3d13.753929200903043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x316f6cc316d5401f%3A0x4ed95850cb562094!2sCGV%20Kim%20C%C3%BAc%20Plaza!5e0!3m2!1svi!2s!4v1642468138406!5m2!1svi!2s"
 					width="100%" height="300" frameborder="0" style="border: 0"
 					allowfullscreen></iframe>
 			</div>
